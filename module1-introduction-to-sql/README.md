@@ -60,6 +60,11 @@ following questions:
 - On average, how many Items does each Character have?
 - On average, how many Weapons does each character have?
 
+-302 total characters
+-75 clerics, 68 fighters, 108 mages, 11 necromancers, 51 thieves
+-174 total items
+-37 are weapons; 137 are not
+
 You do not need all the tables - in particular, the `account_*`, `auth_*`,
 `django_*`, and `socialaccount_*` tables are for the application and do not have
 the data you need. the `charactercreator_*` and `armory_*` tables and where you
