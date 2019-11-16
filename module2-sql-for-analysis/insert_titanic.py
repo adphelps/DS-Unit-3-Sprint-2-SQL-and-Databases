@@ -13,9 +13,9 @@ create_titanic_table = """
 CREATE TYPE Sex AS ENUM('male', 'female');
 
 CREATE TABLE Titanic(
+    Name VARCHAR(50) PRIMARY KEY,
     Survived bit NOT NULL,
     Pclass int NOT NULL,
-    Name VARCHAR(50) PRIMARY KEY,
     Sex Sex NOT NULL,
     Age int NOT NULL,
     Siblings_Spouses_aboard int NOT NULL,
@@ -30,3 +30,4 @@ pg_conn.commit()
 df = pd.read_csv('titanic.csv')
 df = df.set_index('Name', verify_integrity=True)
 df.to_sql('Titanic', pg_conn)
+pg_conn.close()
